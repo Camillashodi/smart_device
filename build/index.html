@@ -54,11 +54,17 @@
       <main>
         <h1 class="visually-hidden">Smart Device - производство и монтаж печатных плат</h1>
         <header class="main-header">
-          <p>
-            <b>Печатные платы</b>
-          </p>
-          <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a href="#" class="main-header_button btn">Получить бесплатную консультацию</a>
+          <img src="./img/main-header-desk.jpg" alt="">
+          <div class="main-header__container container">
+            <p>
+              <b>Печатные платы</b>
+            </p>
+            <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+            <a href="#" class="main-header_button btn">
+              <span>Получить бесплатную консультацию</span>
+              <span>бесплатная консультация</span>
+            </a>
+          </div>
         </header>
         <section class="advantages">
           <div class="container">
@@ -144,57 +150,80 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="container">
+        <div class="footer__container container">
           <div class="footer__social social">
             <a href="#" class="social__logo">
-              <img src="" alt="">
+              <img src="./img/svg/logo.svg" alt="">
             </a>
             <ul class="social__list">
               <li class="social__item social__item--facebook">
-                <a href="#">
-                  <span>Мы в Facebook</span>
+                <a href="#" class="social__link">
+                  <svg width="40" height="40">
+                    <use xlink:href="img/sprite_auto.svg#facebook"></use>
+                  </svg>
+                  <span class="visually-hidden">Мы в Facebook</span>
                 </a>
               </li>
               <li class="social__item social__item--odn">
-                <a href="#">
-                  <span>Мы в Одноклассниках</span>
+                <a href="#" class="social__link">
+                  <svg width="40" height="40">
+                    <use xlink:href="img/sprite_auto.svg#class"></use>
+                  </svg>
+                  <span class="visually-hidden">Мы в Одноклассниках</span>
                 </a>
               </li>
               <li class="social__item social__item--vk">
-                <a href="#">
-                  <span>Мы во Вконтакте</span>
+                <a href="#" class="social__link">
+                  <svg width="40" height="40">
+                    <use xlink:href="img/sprite_auto.svg#vk"></use>
+                  </svg>
+                  <span class="visually-hidden">Мы во Вконтакте</span>
                 </a>
               </li>
             </ul>
           </div>
           <nav class="footer__nav main-nav">
             <h2>Разделы сайта</h2>
+            <button class="main-nav__toggle toggle-btn">
+              <span class="visually-hidden">Раскрыть</span>
+            </button>
             <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Продукты</a>
+              <li>
+                <ul class="main-nav__column">
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">О Компаниии</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Продукты</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Протзводство печатных плат</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Монтаж печатных плат</a>
+                  </li>
+                </ul>
               </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Протзводство печатных плат</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Монтаж печатных плат</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Комплектующие</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Доставка</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Контакты</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link"></a>
+              <li>
+                <ul class="main-nav__column">
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Комплектующие</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Доставка</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Контакты</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </nav>
           <div class="footer__address address">
             <h2>Наш офис</h2>
+            <button class="address__toggle toggle-btn">
+              <span class="visually-hidden">Раскрыть</span>
+            </button>
             <p>г. Мытищи, Олимпийский проспект, д.10</p>
             <p><a href="tel:+74955894050">+7 (495) 589-40-50</a></p>
             <p><a href="tel:+79253895829">+7 (925) 389-58-29</a></p>
