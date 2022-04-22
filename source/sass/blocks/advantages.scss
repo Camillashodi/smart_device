@@ -1,0 +1,120 @@
+.advantages {
+  line-height: 22px;
+  padding: 120px 0;
+  background-color: $alice-blue2;
+  color: $black-pearl;
+
+  @include vp-1023 {
+    padding: 80px 0;
+  }
+
+  @include vp-767 {
+    padding: 50px 0;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  h3 {
+    font-family: $ff-significant;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+    color: $deep-sky-blue;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}
+
+.advantages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 32px;
+  row-gap: 30px;
+
+  @media (max-width: 621px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantages__item {
+  box-sizing: border-box;
+  border: 1px solid $whisper;
+  border-left: 5px solid $deep-sky-blue;
+  padding-left: 40px;
+  padding-right: 45px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+  min-height: 300px;
+
+  @include vp-1023 {
+    min-height: 360px;
+    padding-left: 45px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  @include vp-767 {
+    min-height: 325px;
+    //justify-self: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+
+  svg {
+    display: block;
+    margin-bottom: 20px;
+    fill: $deep-sky-blue;
+    width: 35px;
+    height: 35px;
+
+    @include vp-767 {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &:focus {
+    border-color: $deep-sky-blue;
+    background-color: $deep-sky-blue;
+    color: $alice-blue;
+    outline: none;
+
+    svg {
+      fill: $alice-blue;
+    }
+
+    h3 {
+      color: $alice-blue;
+    }
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      border-color: $deep-sky-blue;
+      background-color: $deep-sky-blue;
+      color: $alice-blue;
+      outline: none;
+
+      svg {
+        fill: $alice-blue;
+      }
+
+      h3 {
+        color: $alice-blue;
+      }
+    }
+  }
+}

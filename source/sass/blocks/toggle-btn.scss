@@ -1,7 +1,32 @@
 .toggle-btn {
   display: none;
+  position: relative;
 
   @include vp-767 {
     display: block;
+    width: 15px;
+    height: 15px;
+    background-color: $color-transparent;
+    border: none;
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 1px;
+      left: 0;
+      background-color: $alice-blue;
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 1px;
+      left: 0;
+      background-color: $alice-blue;
+    }
   }
 }

@@ -11,6 +11,11 @@
     margin: 0;
     margin-bottom: 20px;
     padding: 0;
+
+    @include vp-767 {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
   }
 
   @include vp-767 {
@@ -25,6 +30,12 @@
       left: -25px;
     }
   }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 0;
+  top: 20px;
 }
 
 .main-nav__list {

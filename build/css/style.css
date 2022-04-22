@@ -663,6 +663,11 @@ button,
   pointer-events: none;
 }
 
+.toggle-btn {
+  display: none;
+  position: relative;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -909,6 +914,164 @@ button,
   display: none;
 }
 
+.advantages {
+  line-height: 22px;
+  padding: 120px 0;
+  background-color: #f8fdff;
+  color: #041827;
+}
+
+.advantages h3 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+  color: #00b2ff;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.advantages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 32px;
+  -moz-column-gap: 32px;
+  column-gap: 32px;
+  row-gap: 30px;
+  /*
+  @include vp-767 {
+    grid-template-columns: minmax(100%, 600px);
+  }
+*/
+}
+
+.advantages__item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ebebeb;
+  border-left: 5px solid #00b2ff;
+  padding-left: 40px;
+  padding-right: 45px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+  min-height: 300px;
+}
+
+.advantages__item svg {
+  display: block;
+  margin-bottom: 20px;
+  fill: #00b2ff;
+  width: 35px;
+  height: 35px;
+}
+
+.advantages__item:focus {
+  border-color: #00b2ff;
+  background-color: #00b2ff;
+  color: #f2f5f6;
+  outline: none;
+}
+
+.advantages__item:focus svg {
+  fill: #f2f5f6;
+}
+
+.advantages__item:focus h3 {
+  color: #f2f5f6;
+}
+
+.description {
+  background-color: #f8fdff;
+  padding-bottom: 100px;
+  color: #041827;
+}
+
+.description h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.description p {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+}
+
+.description__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 150px 1fr 9.7fr;
+  grid-template-columns: 150px 1fr 9.7fr;
+}
+
+.description__content {
+  -ms-grid-column: 3;
+  grid-column-start: 3;
+}
+
+.description__button {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #00b2ff;
+  border-radius: 3px;
+  color: #00b2ff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  padding-right: 48px;
+  padding-left: 48px;
+}
+
+.description__hide-content {
+  display: none;
+}
+
+.catalog {
+  background-color: #041827;
+  color: #ffffff;
+  padding-top: 70px;
+  padding-bottom: 140px;
+}
+
+.catalog h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 51px;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+.catalog__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card__link {
+  color: #ffffff;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+
+.card__link h3 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
 .footer {
   background-color: #041827;
   color: rgba(255, 255, 255, 0.7);
@@ -1001,6 +1164,12 @@ button,
   padding: 0;
 }
 
+.main-nav__toggle {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
 .main-nav__list {
   list-style: none;
   margin: 0;
@@ -1026,10 +1195,6 @@ button,
 
 .main-nav__link {
   color: rgba(255, 255, 255, 0.7);
-}
-
-.toggle-btn {
-  display: none;
 }
 
 .address {
@@ -1058,6 +1223,12 @@ button,
   color: rgba(255, 255, 255, 0.7);
 }
 
+.address__toggle {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1069,6 +1240,24 @@ button,
   .btn:hover,
   .btn:focus {
     opacity: 0.8;
+  }
+
+  .advantages__item:hover,
+  .advantages__item:focus {
+    border-color: #00b2ff;
+    background-color: #00b2ff;
+    color: #f2f5f6;
+    outline: none;
+  }
+
+  .advantages__item:hover svg,
+  .advantages__item:focus svg {
+    fill: #f2f5f6;
+  }
+
+  .advantages__item:hover h3,
+  .advantages__item:focus h3 {
+    color: #f2f5f6;
   }
 }
 
@@ -1135,6 +1324,27 @@ button,
     margin-left: 45px;
   }
 
+  .advantages {
+    padding: 80px 0;
+  }
+
+  .advantages__item {
+    min-height: 360px;
+    padding-left: 45px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  .description {
+    padding-bottom: 80px;
+  }
+
+  .description__container {
+    -ms-grid-columns: 150px 1fr 18.5fr;
+    grid-template-columns: 150px 1fr 18.5fr;
+  }
+
   .footer__container {
     -ms-grid-columns: 1fr 47%;
     grid-template-columns: 1fr 47%;
@@ -1186,6 +1396,34 @@ button,
 @media (max-width: 767px) {
   .container {
     padding: 0 25px;
+  }
+
+  .toggle-btn {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+  }
+
+  .toggle-btn::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 1px;
+    left: 0;
+    background-color: #f2f5f6;
+  }
+
+  .toggle-btn::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 1px;
+    left: 0;
+    background-color: #f2f5f6;
   }
 
   .modal__wrapper {
@@ -1252,6 +1490,39 @@ button,
     display: inline;
   }
 
+  .advantages {
+    padding: 50px 0;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .advantages h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .advantages__item {
+    min-height: 325px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+
+  .advantages__item svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .description img {
+    display: none;
+  }
+
+  .description__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
   .footer__container {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -1303,6 +1574,11 @@ button,
     justify-self: center;
   }
 
+  .main-nav h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
   .main-nav::after {
     display: block;
     position: absolute;
@@ -1314,10 +1590,6 @@ button,
     left: -25px;
   }
 
-  .toggle-btn {
-    display: block;
-  }
-
   .address::after {
     display: block;
     position: absolute;
@@ -1327,5 +1599,17 @@ button,
     background-color: rgba(242, 245, 246, 0.7);
     bottom: 0;
     left: -25px;
+  }
+
+  .address h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 621px) {
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }

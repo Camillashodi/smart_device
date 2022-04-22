@@ -24,6 +24,11 @@
     margin: 0;
     margin-bottom: 20px;
     padding: 0;
+
+    @include vp-767 {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
   }
 
   p {
@@ -35,4 +40,10 @@
   a {
     color: rgba($color-default-white, 0.7);
   }
+}
+
+.address__toggle {
+  position: absolute;
+  right: 0;
+  top: 20px;
 }

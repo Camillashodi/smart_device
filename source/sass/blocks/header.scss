@@ -42,7 +42,7 @@
   @include vp-767 {
     height: 35px;
     width: auto;
-  
+
     &--text {
       display: none;
     }
@@ -91,11 +91,11 @@
       margin: -1px;
       padding: 0;
       overflow: hidden;
-    
+
       white-space: nowrap;
-    
+
       border: 0;
-    
+
       clip: rect(0 0 0 0);
       clip-path: inset(100%);
     }
