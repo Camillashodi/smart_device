@@ -121,13 +121,25 @@
         </section>
         <section class="catalog">
           <div class="catalog__container container">
-            <h2>Smart Device предлагает следующие товары и услуги</h2>
+            <h2>
+              <span>Smart Device предлагает следующие товары и услуги</span>
+              <span>Товары и услуги<br>Smart Device</span>
+            </h2>
             <ul class="catalog__list">
               <li class="catalog__item card">
                 <a href="#" class="card__link">
                   <div class="card__content">
                     <h3>Производство печатных плат</h3>
                   </div>
+                  <div class="card__img">
+                    <img src="./img/main-header.jpg" alt="">
+                  </div>
+                  <a href="#" class="card__btn">
+                    <svg width="5" height="10">
+                      <use xlink:href="img/sprite_auto.svg#arrow"></use>
+                    </svg>
+                    <span class="visually-hidden">Заказать</span>
+                  </a>
                 </a>
               </li>
               <li class="catalog__item card">
@@ -135,6 +147,15 @@
                   <div class="card__content">
                     <h3>Монтаж печатных плат</h3>
                   </div>
+                  <div class="card__img">
+                    <img src="./img/main-header.jpg" alt="">
+                  </div>
+                  <a href="#" class="card__btn">
+                    <svg width="5" height="10">
+                      <use xlink:href="img/sprite_auto.svg#arrow"></use>
+                    </svg>
+                    <span class="visually-hidden">Заказать</span>
+                  </a>
                 </a>
               </li>
               <li class="catalog__item card">
@@ -142,33 +163,47 @@
                   <div class="card__content">
                     <h3>Комплектующие для светотехники</h3>
                   </div>
+                  <div class="card__img">
+                    <img src="./img/main-header.jpg" alt="">
+                  </div>
+                  <a href="#" class="card__btn">
+                    <svg width="5" height="10">
+                      <use xlink:href="img/sprite_auto.svg#arrow"></use>
+                    </svg>
+                    <span class="visually-hidden">Заказать</span>
+                  </a>
                 </a>
               </li>
             </ul>
           </div>
         </section>
         <section class="contact">
-          <h2>Остались вопросы? Задайте их нам!</h2>
-          <p>Мы проконсультируем Вас бесплатно</p>
-          <form action="#" class="contact__from form">
-            <div class="form__input">
-              <label for="customerName" class="visually-hidden">Ваше имя</label>
-              <input type="text" name="customerName" id="customerName" placeholder="Имя">
+          <div class="contact__container container">
+            <img src="./img/airplane.png" alt="" width="510" height="285">
+            <div class="contact__content">
+              <h2>Остались вопросы? Задайте их нам!</h2>
+              <p>Мы проконсультируем Вас бесплатно</p>
+              <form action="#" class="contact__from form">
+                <div class="form__input">
+                  <label for="customerName" class="visually-hidden">Ваше имя</label>
+                  <input type="text" name="customerName" id="customerName" placeholder="Имя">
+                </div>
+                <div class="form__input">
+                  <label for="customerTel" class="visually-hidden">Ваш телефон</label>
+                  <input type="number" name="customerTel" id="customerTel" placeholder="Телефон">
+                </div>
+                <div class="form__textarea">
+                  <label for="customerText" class="visually-hidden">Напишите ваш вопрос</label>
+                  <textarea name="customerText" id="customerText" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+                </div>
+                <div class="form__checkbox">
+                  <input type="checkbox" name="isDataAllowed" id="isDataAllowed" checked>
+                  <label for="isDataAllowed">Я согласен на обработку  персональных данных</label>
+                </div>
+                <button type="submit" class="form__submit btn">Задать вопрос</button>
+              </form>
             </div>
-            <div class="form__input">
-              <label for="customerTel" class="visually-hidden">Ваш телефон</label>
-              <input type="number" name="customerTel" id="customerTel" placeholder="Телефон">
-            </div>
-            <div class="form__textarea">
-              <label for="customerText" class="visually-hidden">Напишите ваш вопрос</label>
-              <textarea name="customerText" id="customerText" cols="30" rows="10">Ваш вопрос</textarea>
-            </div>
-            <div class="form__checkbox">
-              <label for="isDataAllowed">Я согласен на обработку  персональных данных</label>
-              <input type="checkbox" name="isDataAllowed" id="isDataAllowed" checked>
-            </div>
-            <button type="submit">Задать вопрос</button>
-          </form>
+          </div>
         </section>
       </main>
       <footer class="footer">
@@ -262,7 +297,7 @@
         <div class="modal__content">
           <h2>Закажите звонок</h2>
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-          <form action="#" class="modal__form form">
+          <form action="#" class="modal__form form form--modal">
             <div class="form__input">
               <label for="modalName" class="visually-hidden">Ваше имя</label>
               <input type="text" name="modalName" id="modalName" placeholder="Имя">

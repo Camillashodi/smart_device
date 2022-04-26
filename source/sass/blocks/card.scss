@@ -1,0 +1,108 @@
+.card {
+  position: relative;
+  //outline: 1px solid red;
+
+  &:first-child {
+    img {
+      object-position: 15% 0;
+    }
+  }
+
+  &:nth-child(3n) {
+    img {
+      object-position: 80% 0;
+    }
+  }
+}
+
+
+.card__link {
+  color: $color-default-white;
+  font-family: $ff-significant;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.card__content {
+  position: relative;
+  z-index: 2;
+
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 80px;
+
+  @include vp-1023 {
+    padding-top: 40px;
+    padding-left: 45px;
+    padding-right: 395px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 90px;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.card__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+
+  img {
+    //position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: rgba($black-pearl, 0.5);
+  }
+}
+
+.card__btn {
+  display: grid;
+  z-index: 1;
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background-color: $deep-sky-blue;
+  bottom: 0;
+  right: 0;
+
+  svg {
+    align-self: center;
+    justify-self: center;
+    fill: none;
+  }
+
+  @include vp-767 {
+    width: 40px;
+    height: 40px;
+  }
+}

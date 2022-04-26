@@ -1,0 +1,146 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "input1 input2"
+    "textarea textarea"
+    "button checkbox";
+  column-gap: 30px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "input1"
+      "input2"
+      "textarea"
+      "button"
+      "checkbox";
+  }
+
+  &--modal {
+    grid-template-columns: 1fr;
+    grid-template-areas: "input1"
+      "input2"
+      "textarea"
+      "button"
+      "checkbox";
+
+      .form__submit{
+        max-width: none;
+      }
+  }
+}
+
+.form__input {
+
+  input {
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    background-color: $pacific-blue;
+    color: $color-default-white;
+    outline: none;
+    border: none;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    &::placeholder {
+      color: $color-default-white;
+    }
+  }
+}
+
+.form__textarea {
+  grid-area: textarea;
+
+  textarea {
+    width: 100%;
+    height: 155px;
+    border-radius: 3px;
+    background-color: $pacific-blue;
+    color: $color-default-white;
+    outline: none;
+    border: none;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    &::placeholder {
+      color: $color-default-white;
+    }
+  }
+}
+
+.form__checkbox {
+  grid-area: checkbox;
+  padding-left: 26px;
+  position: relative;
+  align-self: end;
+  margin-bottom: 25px;
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+  }
+
+  label {
+    font-size: 14px;
+    line-height: 14px;
+    color: rgba($color-default-white, 0.8);
+
+    &::before {
+      display: block;
+      content: "";
+      width: 15px;
+      height: 15px;
+      border: 1px solid $color-default-white;
+      border-radius: 2px;
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 7px);
+    }
+
+    &::after {
+      display: none;
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 6px;
+      background-image: url(../img/svg/check.svg);
+      background-repeat: no-repeat;
+      left: 3px;
+      top: calc(50% - 3px);
+    }
+  }
+}
+
+.form__checkbox input:checked + label {
+  &::after {
+    display: block;
+  }
+}
+
+.form__submit {
+  grid-area: button;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-self: end;
+  max-width: 256px;
+
+  @include vp-767 {
+    max-width: none;
+  }
+}

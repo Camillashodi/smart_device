@@ -59,10 +59,27 @@
   &__content {
     position: relative;
 
-    width: 600px;
+    width: 500px;
     padding: 40px;
 
-    background-color: $color-default-white;
+    background-color: $deep-sky-blue;
+    color: $color-default-white;
+
+    h2 {
+      font-family: $ff-significant;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 42px;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 40px;
+    }
 
     @include vp-767 {
       width: 100%;
@@ -83,6 +100,12 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    svg {
+      fill: $color-default-white;
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &--responsive {
