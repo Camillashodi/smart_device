@@ -27,6 +27,14 @@
       height: 1px;
       left: 0;
       background-color: $alice-blue;
+      transform: rotate(90deg);
     }
+  }
+}
+
+.toggle-btn.is-open,
+.toggle-btn.no-js {
+  &::after {
+    transform: rotate(180deg);
   }
 }

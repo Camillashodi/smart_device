@@ -23,14 +23,13 @@
       "button"
       "checkbox";
 
-      .form__submit{
-        max-width: none;
-      }
+    .form__submit {
+      max-width: none;
+    }
   }
 }
 
 .form__input {
-
   input {
     display: block;
     width: 100%;
@@ -44,6 +43,16 @@
 
     &::placeholder {
       color: $color-default-white;
+    }
+
+    &:focus {
+      outline: 1px solid $black-pearl;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        outline: 1px solid $black-pearl;
+      }
     }
   }
 }
@@ -59,21 +68,50 @@
     color: $color-default-white;
     outline: none;
     border: none;
-    padding: 15px;
+    padding: 26px 16px;
     margin-bottom: 20px;
+
+    @include vp-1023 {
+      padding: 35px 15px;
+    }
 
     &::placeholder {
       color: $color-default-white;
+    }
+
+    &:focus {
+      outline: 1px solid $black-pearl;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        outline: 1px solid $black-pearl;
+      }
+    }
+
+    @include vp-767 {
+      padding: 27px 16px;
+      height: 182px;
+      margin-bottom: 15px;
     }
   }
 }
 
 .form__checkbox {
   grid-area: checkbox;
-  padding-left: 26px;
+  padding-left: 37px;
   position: relative;
   align-self: end;
   margin-bottom: 25px;
+
+  @include vp-1023 {
+    margin-bottom: 29px;
+    padding-left: 26px;
+  }
+
+  @include vp-767 {
+    padding-left: 30px;
+  }
 
   input {
     position: absolute;
@@ -90,8 +128,10 @@
 
   label {
     font-size: 14px;
-    line-height: 14px;
+    line-height: 16px;
     color: rgba($color-default-white, 0.8);
+    display: block;
+    cursor: pointer;
 
     &::before {
       display: block;
@@ -102,8 +142,16 @@
       border-radius: 2px;
       box-sizing: border-box;
       position: absolute;
-      left: 0;
-      top: calc(50% - 7px);
+      left: 10px;
+      top: calc(50% - 8px);
+
+      @include vp-1023 {
+        left: 0;
+      }
+
+      @include vp-767 {
+        left: 5px;
+      }
     }
 
     &::after {
@@ -112,10 +160,20 @@
       position: absolute;
       width: 9px;
       height: 6px;
-      background-image: url(../img/svg/check.svg);
+      background-image: url("../img/svg/check.svg");
       background-repeat: no-repeat;
-      left: 3px;
+      left: 13px;
       top: calc(50% - 3px);
+
+      @include vp-1023 {
+        left: 3px;
+        top: calc(50% - 4px);
+      }
+
+      @include vp-767 {
+        left: 8px;
+        top: calc(50% - 4px);
+      }
     }
   }
 }
@@ -126,6 +184,25 @@
   }
 }
 
+.form__checkbox input:focus + label {
+  color: $color-default-white;
+
+  &::before {
+    border-color: $black-pearl;
+  }
+}
+
+.form__checkbox input:hover + label {
+  @media (hover: hover), screen and (min-width: 0\0) {
+    color: $color-default-white;
+
+    &::before {
+      border-color: $black-pearl;
+    }
+  }
+}
+
+
 .form__submit {
   grid-area: button;
   border-radius: 3px;
@@ -135,12 +212,14 @@
   width: 100%;
   justify-content: center;
   margin-bottom: 25px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 16px;
+  padding-bottom: 12px;
   align-self: end;
-  max-width: 256px;
+  max-width: 266px;
+  letter-spacing: 0.05em;
 
   @include vp-767 {
     max-width: none;
+    margin-bottom: 23px;
   }
 }

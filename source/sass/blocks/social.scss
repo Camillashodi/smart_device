@@ -29,6 +29,10 @@
 .social__logo {
   margin-bottom: 30px;
 
+  @include vp-767 {
+    margin-bottom: 8px;
+  }
+
   img {
     display: block;
   }
@@ -40,15 +44,34 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-self: end;
+  justify-self: start;
+  margin-left: 10px;
+
+  @include vp-1023 {
+    justify-self: end;
+    position: relative;
+  }
 
   @include vp-767 {
     justify-self: center;
+    margin-bottom: 18px;
   }
 }
 
 .social__item {
   margin-right: 15px;
+
+  @include vp-1023 {
+    margin-right: 0;
+    margin-left: 15px;
+    margin-top: 7px;
+    position: relative;
+    right: -5px;
+  }
+
+  @include vp-767 {
+    right: 10px;
+  }
 }
 
 .social__link {

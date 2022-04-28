@@ -5,11 +5,13 @@
   color: $black-pearl;
 
   @include vp-1023 {
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 75px;
   }
 
   @include vp-767 {
     padding: 50px 0;
+    padding-bottom: 48px;
     font-size: 14px;
     line-height: 19px;
   }
@@ -24,10 +26,19 @@
     padding: 0;
     margin-bottom: 15px;
 
+    @include vp-1023 {
+      margin-bottom: 8px;
+    }
+
     @include vp-767 {
       font-size: 20px;
       line-height: 28px;
     }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -50,23 +61,23 @@
   border: 1px solid $whisper;
   border-left: 5px solid $deep-sky-blue;
   padding-left: 40px;
-  padding-right: 45px;
+  padding-right: 43px;
   padding-top: 40px;
   padding-bottom: 35px;
   min-height: 300px;
 
   @include vp-1023 {
     min-height: 360px;
-    padding-left: 45px;
+    padding-left: 38px;
     padding-right: 30px;
     padding-top: 40px;
-    padding-bottom: 35px;
+    padding-bottom: 15px;
   }
 
   @include vp-767 {
-    min-height: 325px;
+    min-height: 340px;
     //justify-self: center;
-    padding-left: 30px;
+    padding-left: 25px;
     padding-right: 30px;
     padding-top: 30px;
     padding-bottom: 35px;
@@ -78,6 +89,10 @@
     fill: $deep-sky-blue;
     width: 35px;
     height: 35px;
+
+    @include vp-1023 {
+      margin-bottom: 15px;
+    }
 
     @include vp-767 {
       width: 30px;
@@ -114,6 +129,50 @@
 
       h3 {
         color: $alice-blue;
+      }
+    }
+  }
+
+  &--tag {
+    @include vp-767 {
+      min-height: 325px;
+    }
+
+    svg {
+      @include vp-1023 {
+        margin-bottom: 10px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 18px;
+      }
+    }
+
+    h3 {
+      @include vp-1023 {
+        margin-bottom: 4px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  &--save {
+    @include vp-767 {
+      min-height: 325px;
+    }
+
+    svg {
+      @include vp-767 {
+        margin-bottom: 18px;
+      }
+    }
+
+    h3 {
+      @include vp-767 {
+        margin-bottom: 14px;
       }
     }
   }

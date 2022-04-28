@@ -1,0 +1,216 @@
+.modal-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "input1"
+    "input2"
+    "textarea"
+    "button"
+    "checkbox";
+
+  .modal-form__submit {
+    max-width: none;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "input1"
+      "input2"
+      "textarea"
+      "button"
+      "checkbox";
+  }
+}
+
+.modal-form__input {
+  input {
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    background-color: $pacific-blue;
+    color: $color-default-white;
+    outline: none;
+    border: none;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    &:focus {
+      outline: 1px solid $black-pearl;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        outline: 1px solid $black-pearl;
+      }
+    }
+
+    &::placeholder {
+      color: $color-default-white;
+    }
+  }
+}
+
+.modal-form__textarea {
+  grid-area: textarea;
+
+  textarea {
+    width: 100%;
+    height: 155px;
+    border-radius: 3px;
+    background-color: $pacific-blue;
+    color: $color-default-white;
+    outline: none;
+    border: none;
+    padding: 26px 16px;
+    margin-bottom: 10px;
+
+    @include vp-1023 {
+      padding: 35px 15px;
+    }
+
+    &::placeholder {
+      color: $color-default-white;
+    }
+
+    @include vp-767 {
+      padding: 27px 16px;
+      height: 182px;
+      margin-bottom: 15px;
+    }
+
+    &:focus {
+      outline: 1px solid $black-pearl;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        outline: 1px solid $black-pearl;
+      }
+    }
+  }
+}
+
+.modal-form__checkbox {
+  grid-area: checkbox;
+  padding-left: 35px;
+  position: relative;
+  align-self: end;
+  margin-bottom: 5px;
+
+  @include vp-1023 {
+    margin-bottom: 29px;
+    padding-left: 26px;
+  }
+
+  @include vp-767 {
+    padding-left: 30px;
+  }
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+  }
+
+  label {
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba($color-default-white, 0.8);
+    display: block;
+    cursor: pointer;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 15px;
+      height: 15px;
+      border: 1px solid $color-default-white;
+      border-radius: 2px;
+      box-sizing: border-box;
+      position: absolute;
+      left: 10px;
+      top: calc(50% - 8px);
+
+      @include vp-1023 {
+        left: 0;
+      }
+
+      @include vp-767 {
+        left: 5px;
+      }
+    }
+
+    &::after {
+      display: none;
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 6px;
+      background-image: url("../img/svg/check.svg");
+      background-repeat: no-repeat;
+      left: 13px;
+      top: calc(50% - 3px);
+
+      @include vp-1023 {
+        left: 3px;
+        top: calc(50% - 4px);
+      }
+
+      @include vp-767 {
+        left: 8px;
+        top: calc(50% - 4px);
+      }
+    }
+  }
+}
+
+.modal-form__checkbox input:checked + label {
+  &::after {
+    display: block;
+  }
+}
+
+.modal-form__checkbox input:focus + label {
+  color: $color-default-white;
+
+  &::before {
+    border-color: $black-pearl;
+  }
+}
+
+.modal-form__checkbox input:hover + label {
+  @media (hover: hover), screen and (min-width: 0\0) {
+    color: $color-default-white;
+
+    &::before {
+      border-color: $black-pearl;
+    }
+  }
+}
+
+.modal-form__submit {
+  grid-area: button;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 18px;
+  padding-top: 16px;
+  padding-bottom: 12px;
+  align-self: end;
+  //max-width: 266px;
+  letter-spacing: 0.05em;
+
+  @include vp-767 {
+    max-width: none;
+    margin-bottom: 23px;
+  }
+}

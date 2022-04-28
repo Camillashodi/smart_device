@@ -4,13 +4,17 @@
   font-size: 22px;
   line-height: 34px;
   position: relative;
-  z-index: -1;
   padding-top: 305px;
   padding-bottom: 270px;
 
   @include vp-1023 {
     padding-top: 180px;
-    padding-bottom: 205px;
+    padding-bottom: 197px;
+  }
+
+  @include vp-767 {
+    padding-top: 150px;
+    padding-bottom: 179px;
   }
 
   p {
@@ -18,9 +22,14 @@
     margin: 0;
     margin-bottom: 30px;
 
+    @include vp-1023 {
+      margin-bottom: 0;
+    }
+
     @include vp-767 {
       font-size: 14px;
       line-height: 22px;
+      margin-bottom: 8px;
     }
   }
 
@@ -49,6 +58,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    @include vp-1023 {
+      object-position: 19.4% 0;
+    }
+
+    @include vp-767 {
+      object-position: 25.4% 0;
+    }
   }
 }
 
@@ -81,13 +98,16 @@
 
   @include vp-1023 {
     margin-left: 45px;
+    margin-top: 57px;
   }
 
   @include vp-767 {
     font-size: 14px;
     line-height: 16px;
     margin-left: 0;
+    margin-top: 37px;
     justify-self: center;
+    padding: 12px 37px;
 
     span {
       &:first-child {
