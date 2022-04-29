@@ -137,6 +137,12 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const modalButton = document.querySelector('[data-open-modal]');
+  const inputName = document.querySelector('[data-input-name]');
+
+  modalButton.addEventListener('click', function () {
+    inputName.focus();
+  });
 
   // ======================================
 
