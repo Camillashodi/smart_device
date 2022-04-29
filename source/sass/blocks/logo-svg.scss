@@ -1,0 +1,12 @@
+.logo-svg {
+  @include vp-767 {
+    height: 35px;
+    width: auto;
+  }
+}
+
+.logo-svg__text {
+  @include vp-767 {
+    display: none;
+  }
+}

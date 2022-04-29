@@ -3,8 +3,8 @@
   //padding-top: 30px;
   //padding-bottom: 35px;
   color: $alice-blue;
-  //position: fixed;
-  position: absolute;
+  position: fixed;
+  //position: absolute;
   top: 0;
   width: 100%;
   z-index: 5;
@@ -43,17 +43,6 @@
 
   svg {
     display: block;
-  }
-}
-
-.header__logo-svg {
-  @include vp-767 {
-    height: 35px;
-    width: auto;
-
-    &--text {
-      display: none;
-    }
   }
 }
 

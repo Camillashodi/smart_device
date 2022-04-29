@@ -29,6 +29,19 @@
   }
 }
 
+.contact__img {
+  position: relative;
+
+  noscript {
+    position: absolute;
+    top: 0;
+  }
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
 .contact__container {
   display: grid;
   grid-template-columns: 0.42fr 0.1fr 0.49fr;

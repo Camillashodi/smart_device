@@ -8,6 +8,7 @@
     padding-bottom: 70px;
 
     img {
+      display: block;
       margin-top: 5px;
     }
 
@@ -131,5 +132,11 @@
     color: $color-default-white;
     background-color: $deep-sky-blue;
     outline: none;
+  }
+}
+
+.description__img {
+  img {
+    display: block;
   }
 }
