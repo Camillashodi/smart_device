@@ -17,10 +17,6 @@
   }
 }
 
-.modal-form__submit {
-  max-width: none;
-}
-
 .modal-form__input {
   input {
     display: block;
@@ -195,6 +191,7 @@
 }
 
 .modal-form__submit {
+  max-width: none;
   grid-area: button;
   border-radius: 3px;
   font-weight: 700;
