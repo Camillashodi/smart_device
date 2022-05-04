@@ -1625,8 +1625,8 @@ button,
 
 .main-nav__toggle {
   position: absolute;
-  right: 0;
-  top: 12px;
+  right: 1px;
+  top: 20px;
 }
 
 .main-nav__list {
@@ -1685,8 +1685,8 @@ button,
 
 .address__toggle {
   position: absolute;
-  right: 0;
-  top: 12px;
+  right: 2px;
+  top: 20px;
 }
 
 .address__content.is-open,
@@ -1700,10 +1700,6 @@ button,
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   grid-template-areas: "input1" "input2" "textarea" "button" "checkbox";
-}
-
-.modal-form__submit {
-  max-width: none;
 }
 
 .modal-form__input input {
@@ -1870,6 +1866,7 @@ button,
 .modal-form__submit {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
+  max-width: none;
   grid-area: button;
   border-radius: 3px;
   font-weight: 700;
@@ -2598,6 +2595,7 @@ button,
     -ms-grid-column-align: stretch;
     justify-self: stretch;
     margin-left: 0;
+    margin-top: 0;
   }
 
   .footer__address {
@@ -2605,6 +2603,7 @@ button,
     grid-column-start: 1;
     -ms-grid-column-span: 1;
     grid-column-end: 2;
+    margin-top: 0;
   }
 
   .social {
@@ -2638,9 +2637,16 @@ button,
     right: 10px;
   }
 
+  .main-nav {
+    min-height: 60px;
+  }
+
   .main-nav h2 {
-    margin-top: 15px;
-    margin-bottom: 21px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 23px;
+    padding-bottom: 21px;
+    margin-bottom: 0;
   }
 
   .main-nav::after {
@@ -2654,8 +2660,15 @@ button,
     left: -25px;
   }
 
+  .main-nav__header {
+    position: absolute;
+    width: 100vw;
+    left: -25px;
+  }
+
   .main-nav__list {
     display: none;
+    margin-top: 60px;
   }
 
   .main-nav__list.is-open,
@@ -2663,6 +2676,10 @@ button,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .address {
+    min-height: 60px;
   }
 
   .address::after {
@@ -2677,8 +2694,12 @@ button,
   }
 
   .address h2 {
-    margin-top: 14px;
-    margin-bottom: 16px;
+    position: relative;
+    padding-top: 22px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 0;
   }
 
   .address p {
@@ -2696,7 +2717,14 @@ button,
     line-height: 25px;
   }
 
+  .address__header {
+    position: absolute;
+    width: 100vw;
+    left: -25px;
+  }
+
   .address__content {
+    margin-top: 55px;
     margin-bottom: 15px;
     display: none;
   }
