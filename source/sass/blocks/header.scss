@@ -1,7 +1,7 @@
 .header {
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   //padding-top: 30px;
-  //padding-bottom: 35px;
+  padding-bottom: 10px;
   color: $alice-blue;
   position: fixed;
   //position: absolute;
@@ -14,31 +14,38 @@
   display: grid;
   //grid-template-columns: min-content minmax(480px, 770px) min-content;
   grid-template-columns: min-content 1fr minmax(160px, 220px);
-  align-items: center;
-  min-height: 120px;
+  align-items: start;
+  min-height: 110px;
   padding-bottom: 5px;
 
   @include vp-1023 {
     grid-template-columns: min-content 1fr;
-    min-height: 100px;
+    min-height: 90px;
     padding-bottom: 5px;
   }
 
   @include vp-767 {
-    min-height: 70px;
+    min-height: 60px;
     padding-bottom: 3px;
   }
 }
 
 .header__logo {
   width: 215px;
-  height: 55px;
+  //height: 55px;
   display: block;
+  align-self: start;
+  padding: 30px 0;
   //margin-right: 10px;
+
+  @include vp-1023 {
+    padding: 20px 0;
+  }
 
   @include vp-767 {
     width: 35px;
     height: 35px;
+    padding: 15px 0;
   }
 
   svg {
@@ -49,6 +56,7 @@
 .header__contact-list {
   list-style: none;
   margin: 0;
+  margin-top: 27px;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -62,6 +70,7 @@
   padding-bottom: 6px;
 
   @include vp-1023 {
+    margin-top: 25px;
     justify-content: right;
     justify-self: end;
     margin-right: 20px;
@@ -70,14 +79,24 @@
   }
 
   @include vp-767 {
+    margin-top: 15px;
     margin-right: 9px;
     padding-bottom: 0;
   }
 }
 
+.header__contact-item {
+  min-width: 225px;
+
+  @include vp-1023 {
+    min-width: 0;
+  }
+}
+
 .header__link {
   display: flex;
-  min-width: 225px;
+  justify-content: flex-start;
+  width: fit-content;
   color: $alice-blue;
   //margin-right: 30px;
   padding: 15px 0;
@@ -127,9 +146,11 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   margin: 5px 0;
+  margin-top: 34px;
   margin-bottom: 12px;
-  margin-left: 2px;
+  //margin-left: 2px;
   justify-self: start;
+  align-self: start;
   padding: 11px 16px;
 
   @include vp-1023 {

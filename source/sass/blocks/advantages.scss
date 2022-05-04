@@ -66,6 +66,10 @@
   padding-bottom: 35px;
   min-height: 300px;
 
+  p {
+    font-family: $ff-default;
+  }
+
   @include vp-1023 {
     min-height: 360px;
     padding-left: 38px;
